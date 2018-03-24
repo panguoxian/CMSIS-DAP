@@ -189,3 +189,5 @@ pip-log.txt
 *Log.txt
 *Settings.ini
 [Bb]uild/
+Firmware/STM32/CMSIS_DAP.uvproj
+Firmware/STM32/CMSIS_DAP.uvproj

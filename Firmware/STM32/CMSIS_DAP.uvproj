@@ -10,16 +10,15 @@
       <TargetName>CMSIS-DAP-V1-F102</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060020::V5.06 (build 20)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
-          <Device>STM32F102C8</Device>
+          <Device>STM32F102CB</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <Cpu>IRAM(0x20000000-0x200027FF) IROM(0x8000000-0x800FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
+          <Cpu>IRAM(0x20000000-0x20003FFF) IROM(0x8000000-0x801FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile>"STARTUP\ST\STM32F10x\startup_stm32f10x_md.s" ("STM32 Medium Density Line Startup Code")</StartupFile>
-          <FlashDriverDll>UL2CM3(-O14 -S0 -C0 -N00("ARM Cortex-M3") -D00(1BA00477) -L00(4) -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F10x_128 -FS08000000 -FL010000)</FlashDriverDll>
-          <DeviceId>4802</DeviceId>
+          <FlashDriverDll>UL2CM3(-O14 -S0 -C0 -N00("ARM Cortex-M3") -D00(1BA00477) -L00(4) -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F10x_128 -FS08000000 -FL020000)</FlashDriverDll>
+          <DeviceId>4801</DeviceId>
           <RegisterFile>stm32f10x.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
@@ -197,8 +196,8 @@
             <ldmm>1</ldmm>
             <ldXref>1</ldXref>
             <BigEnd>0</BigEnd>
-            <AdsALst>0</AdsALst>
-            <AdsACrf>0</AdsACrf>
+            <AdsALst>1</AdsALst>
+            <AdsACrf>1</AdsACrf>
             <AdsANop>0</AdsANop>
             <AdsANot>0</AdsANot>
             <AdsLLst>1</AdsLLst>
@@ -228,7 +227,6 @@
             <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
-            <nSecure>0</nSecure>
             <RoSelD>3</RoSelD>
             <RwSelD>3</RwSelD>
             <CodeSel>0</CodeSel>
@@ -282,12 +280,12 @@
               <IRAM>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x2800</Size>
+                <Size>0x4000</Size>
               </IRAM>
               <IROM>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0x20000</Size>
               </IROM>
               <XRAM>
                 <Type>0</Type>
@@ -312,7 +310,7 @@
               <OCR_RVCT4>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0x20000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -337,7 +335,7 @@
               <OCR_RVCT9>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x2800</Size>
+                <Size>0x4000</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
@@ -365,14 +363,17 @@
             <useXO>0</useXO>
             <v6Lang>0</v6Lang>
             <v6LangP>0</v6LangP>
+<<<<<<< HEAD
             <vShortEn>0</vShortEn>
             <vShortWch>0</vShortWch>
             <v6Lto>0</v6Lto>
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
+=======
+>>>>>>> parent of 7b0a7e3... Add CMSIS-DAP-STLINK21.hex
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_STDPERIPH_DRIVER STM32F10X_MD BOARD_V1 STM32F102C8</Define>
+              <Define>USE_STDPERIPH_DRIVER STM32F10X_MD BOARD_V1 STM32F102CB</Define>
               <Undefine></Undefine>
               <IncludePath>.;.\STM32F10x_StdPeriph_Driver\inc</IncludePath>
             </VariousControls>
@@ -405,7 +406,7 @@
             <TextAddressRange>0x08000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile>.\CMSIS_DAP-C8.sct</ScatterFile>
+            <ScatterFile>.\CMSIS_DAP.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -553,6 +554,7 @@
               <FileName>CMSIS_DAP-CB.sct</FileName>
               <FileType>2</FileType>
               <FilePath>.\CMSIS_DAP-CB.sct</FilePath>
+<<<<<<< HEAD
               <FileOption>
                 <CommonProperty>
                   <UseCPPCompiler>2</UseCPPCompiler>
@@ -591,6 +593,8 @@
                   </Aads>
                 </FileArmAds>
               </FileOption>
+=======
+>>>>>>> parent of 7b0a7e3... Add CMSIS-DAP-STLINK21.hex
             </File>
           </Files>
         </Group>
@@ -635,16 +639,15 @@
       <TargetName>CMSIS-DAP-V1-F103</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060020::V5.06 (build 20)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
-          <Device>STM32F103C8</Device>
+          <Device>STM32F103CB</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <Cpu>IRAM(0x20000000-0x20004FFF) IROM(0x8000000-0x800FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
+          <Cpu>IRAM(0x20000000-0x20004FFF) IROM(0x8000000-0x801FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile>"STARTUP\ST\STM32F10x\startup_stm32f10x_md.s" ("STM32 Medium Density Line Startup Code")</StartupFile>
-          <FlashDriverDll>UL2CM3(-O14 -S0 -C0 -N00("ARM Cortex-M3") -D00(1BA00477) -L00(4) -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F10x_128 -FS08000000 -FL010000)</FlashDriverDll>
-          <DeviceId>4235</DeviceId>
+          <FlashDriverDll>UL2CM3(-O14 -S0 -C0 -N00("ARM Cortex-M3") -D00(1BA00477) -L00(4) -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F10x_128 -FS08000000 -FL020000)</FlashDriverDll>
+          <DeviceId>4401</DeviceId>
           <RegisterFile>stm32f10x.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
@@ -655,7 +658,7 @@
           <SLE66CMisc></SLE66CMisc>
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
-          <SFDFile>SFD\ST\STM32F1xx\STM32F103xx.sfrSVD=SFD\ST\STM32F1xx\STM32F103xx.sfr</SFDFile>
+          <SFDFile>SFD\ST\STM32F1xx\STM32F103xx.sfr</SFDFile>
           <bCustSvd>0</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
@@ -734,11 +737,11 @@
           <SimDllName>SARMCM3.DLL</SimDllName>
           <SimDllArguments></SimDllArguments>
           <SimDlgDll>DARMSTM.DLL</SimDlgDll>
-          <SimDlgDllArguments>-pSTM32F103C8</SimDlgDllArguments>
+          <SimDlgDllArguments>-pSTM32F103CB</SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
           <TargetDllArguments></TargetDllArguments>
           <TargetDlgDll>TARMSTM.DLL</TargetDlgDll>
-          <TargetDlgDllArguments>-pSTM32F103C8</TargetDlgDllArguments>
+          <TargetDlgDllArguments>-pSTM32F103CB</TargetDlgDllArguments>
         </DllOption>
         <DebugOption>
           <OPTHX>
@@ -853,7 +856,6 @@
             <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
-            <nSecure>0</nSecure>
             <RoSelD>3</RoSelD>
             <RwSelD>3</RwSelD>
             <CodeSel>0</CodeSel>
@@ -912,7 +914,7 @@
               <IROM>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0x20000</Size>
               </IROM>
               <XRAM>
                 <Type>0</Type>
@@ -937,7 +939,7 @@
               <OCR_RVCT4>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0x20000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -990,11 +992,14 @@
             <useXO>0</useXO>
             <v6Lang>0</v6Lang>
             <v6LangP>0</v6LangP>
+<<<<<<< HEAD
             <vShortEn>0</vShortEn>
             <vShortWch>0</vShortWch>
             <v6Lto>0</v6Lto>
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
+=======
+>>>>>>> parent of 7b0a7e3... Add CMSIS-DAP-STLINK21.hex
             <VariousControls>
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER STM32F10X_MD BOARD_V1</Define>
@@ -1030,7 +1035,7 @@
             <TextAddressRange>0x08000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile>.\CMSIS_DAP-C8.sct</ScatterFile>
+            <ScatterFile>.\CMSIS_DAP.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -1260,16 +1265,15 @@
       <TargetName>CMSIS-DAP-V2-F102</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060020::V5.06 (build 20)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
-          <Device>STM32F102C8</Device>
+          <Device>STM32F102CB</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <Cpu>IRAM(0x20000000-0x200027FF) IROM(0x8000000-0x800FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
+          <Cpu>IRAM(0x20000000-0x20003FFF) IROM(0x8000000-0x801FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile>"STARTUP\ST\STM32F10x\startup_stm32f10x_md.s" ("STM32 Medium Density Line Startup Code")</StartupFile>
-          <FlashDriverDll>UL2CM3(-O14 -S0 -C0 -N00("ARM Cortex-M3") -D00(1BA00477) -L00(4) -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F10x_128 -FS08000000 -FL010000)</FlashDriverDll>
-          <DeviceId>4802</DeviceId>
+          <FlashDriverDll>UL2CM3(-O14 -S0 -C0 -N00("ARM Cortex-M3") -D00(1BA00477) -L00(4) -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F10x_128 -FS08000000 -FL020000)</FlashDriverDll>
+          <DeviceId>4801</DeviceId>
           <RegisterFile>stm32f10x.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
@@ -1426,7 +1430,7 @@
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -1478,7 +1482,6 @@
             <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
-            <nSecure>0</nSecure>
             <RoSelD>3</RoSelD>
             <RwSelD>3</RwSelD>
             <CodeSel>0</CodeSel>
@@ -1532,12 +1535,12 @@
               <IRAM>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x2800</Size>
+                <Size>0x4000</Size>
               </IRAM>
               <IROM>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0x20000</Size>
               </IROM>
               <XRAM>
                 <Type>0</Type>
@@ -1562,7 +1565,7 @@
               <OCR_RVCT4>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0x20000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -1587,7 +1590,7 @@
               <OCR_RVCT9>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x2800</Size>
+                <Size>0x4000</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
@@ -1615,14 +1618,17 @@
             <useXO>0</useXO>
             <v6Lang>0</v6Lang>
             <v6LangP>0</v6LangP>
+<<<<<<< HEAD
             <vShortEn>0</vShortEn>
             <vShortWch>0</vShortWch>
             <v6Lto>0</v6Lto>
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
+=======
+>>>>>>> parent of 7b0a7e3... Add CMSIS-DAP-STLINK21.hex
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_STDPERIPH_DRIVER STM32F10X_MD BOARD_V2 STM32F102C8</Define>
+              <Define>USE_STDPERIPH_DRIVER STM32F10X_MD BOARD_V2 STM32F102CB</Define>
               <Undefine></Undefine>
               <IncludePath>.;.\STM32F10x_StdPeriph_Driver\inc</IncludePath>
             </VariousControls>
@@ -1655,7 +1661,7 @@
             <TextAddressRange>0x08000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile>.\CMSIS_DAP-C8.sct</ScatterFile>
+            <ScatterFile>.\CMSIS_DAP.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -1885,7 +1891,10 @@
       <TargetName>CMSIS-DAP-V2-F103</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+<<<<<<< HEAD
       <pCCUsed>5060300::V5.06 update 3 (build 300)::ARMCC</pCCUsed>
+=======
+>>>>>>> parent of 7b0a7e3... Add CMSIS-DAP-STLINK21.hex
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F103C8</Device>
@@ -2103,7 +2112,6 @@
             <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
-            <nSecure>0</nSecure>
             <RoSelD>3</RoSelD>
             <RwSelD>3</RwSelD>
             <CodeSel>0</CodeSel>
@@ -2240,11 +2248,14 @@
             <useXO>0</useXO>
             <v6Lang>0</v6Lang>
             <v6LangP>0</v6LangP>
+<<<<<<< HEAD
             <vShortEn>0</vShortEn>
             <vShortWch>0</vShortWch>
             <v6Lto>0</v6Lto>
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
+=======
+>>>>>>> parent of 7b0a7e3... Add CMSIS-DAP-STLINK21.hex
             <VariousControls>
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER STM32F10X_MD BOARD_V2</Define>
@@ -2280,7 +2291,7 @@
             <TextAddressRange>0x08000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile>.\CMSIS_DAP-C8.sct</ScatterFile>
+            <ScatterFile>.\CMSIS_DAP.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -2510,7 +2521,6 @@
       <TargetName>CMSIS-DAP-V3-F103</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060020::V5.06 (build 20)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F103C8</Device>
@@ -2728,7 +2738,6 @@
             <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
-            <nSecure>0</nSecure>
             <RoSelD>3</RoSelD>
             <RwSelD>3</RwSelD>
             <CodeSel>0</CodeSel>
@@ -2865,11 +2874,14 @@
             <useXO>0</useXO>
             <v6Lang>0</v6Lang>
             <v6LangP>0</v6LangP>
+<<<<<<< HEAD
             <vShortEn>0</vShortEn>
             <vShortWch>0</vShortWch>
             <v6Lto>0</v6Lto>
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
+=======
+>>>>>>> parent of 7b0a7e3... Add CMSIS-DAP-STLINK21.hex
             <VariousControls>
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER STM32F10X_MD STLINK_V20</Define>
@@ -3135,7 +3147,6 @@
       <TargetName>CMSIS-DAP-STLINKV21</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060020::V5.06 (build 20)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F103C8</Device>
@@ -3322,8 +3333,8 @@
             <ldmm>1</ldmm>
             <ldXref>1</ldXref>
             <BigEnd>0</BigEnd>
-            <AdsALst>0</AdsALst>
-            <AdsACrf>0</AdsACrf>
+            <AdsALst>1</AdsALst>
+            <AdsACrf>1</AdsACrf>
             <AdsANop>0</AdsANop>
             <AdsANot>0</AdsANot>
             <AdsLLst>1</AdsLLst>
@@ -3353,7 +3364,6 @@
             <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
-            <nSecure>0</nSecure>
             <RoSelD>3</RoSelD>
             <RwSelD>3</RwSelD>
             <CodeSel>0</CodeSel>
@@ -3490,11 +3500,14 @@
             <useXO>0</useXO>
             <v6Lang>0</v6Lang>
             <v6LangP>0</v6LangP>
+<<<<<<< HEAD
             <vShortEn>0</vShortEn>
             <vShortWch>0</vShortWch>
             <v6Lto>0</v6Lto>
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
+=======
+>>>>>>> parent of 7b0a7e3... Add CMSIS-DAP-STLINK21.hex
             <VariousControls>
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER STM32F10X_MD STLINK_V21</Define>
@@ -3977,7 +3990,6 @@
             <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
-            <nSecure>0</nSecure>
             <RoSelD>3</RoSelD>
             <RwSelD>3</RwSelD>
             <CodeSel>0</CodeSel>
@@ -4114,11 +4126,14 @@
             <useXO>0</useXO>
             <v6Lang>0</v6Lang>
             <v6LangP>0</v6LangP>
+<<<<<<< HEAD
             <vShortEn>0</vShortEn>
             <vShortWch>0</vShortWch>
             <v6Lto>0</v6Lto>
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
+=======
+>>>>>>> parent of 7b0a7e3... Add CMSIS-DAP-STLINK21.hex
             <VariousControls>
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER STM32F10X_MD BOARD_STM32RF</Define>
